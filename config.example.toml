@@ -1,0 +1,12 @@
+[bot]
+token = ""
+workers = 1
+
+[user]
+session_name = "usernames-bot"
+api_id = 12345
+api_hash = ""
+phone_number = ""
+
+[other]
+channel_id = -1001103210224

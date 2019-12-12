@@ -1,0 +1,41 @@
+{
+    "version": 1,
+    "disable_existing_loggers": false,
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+            "formatter": "standard",
+            "level": "DEBUG"
+        },
+        "file": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "formatter": "standard",
+            "level": "DEBUG",
+            "encoding": "utf8",
+            "filename": "logs/usernames.log",
+            "maxBytes": 1048576,
+            "backupCount": 500
+        }
+    },
+    "loggers": {
+        "": {
+            "handlers": [
+                "console",
+                "file"
+            ],
+            "propagate": false,
+            "level": "DEBUG"
+        },
+        "pyrogram": {
+            "level": "WARNING"
+        },
+        "telegram": {
+            "level": "WARNING"
+        }
+    },
+    "formatters": {
+        "standard": {
+            "format": "[%(asctime)s][%(name)s:%(lineno)d][%(funcName)s][%(levelname)s] >>> %(message)s"
+        }
+    }
+}
